@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import User from './user'
 
 class Dummy extends React.Component {
@@ -18,12 +19,8 @@ class Dummy extends React.Component {
              onClick = {() => this.setState({ isLoggedIn: !isLoggedIn })}>
              {(isLoggedIn) ? 'Logout' : 'Sign In'}
              </button>
-             <User isLoggedIn={isLoggedIn}           
-             name = 'Becca'
-             age = {28}
-             />
-             <User isLoggedIn={isLoggedIn} name = 'Todd' age = {45}
-             />
+             <Link to="/todd">Todd</Link>
+             <Link to="/becca">Becca</Link>
             </>
         )
     }
